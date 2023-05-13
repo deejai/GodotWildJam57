@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ceu1aad752bbm"]
+
+[ext_resource type="Script" path="res://Game/Characters/Player/Player.gd" id="1_j8snq"]
+[ext_resource type="Texture2D" uid="uid://cknueq28oge4l" path="res://Assets/Sprites/Characters/baldy.png" id="1_v2eyr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovri5"]
+atlas = ExtResource("1_v2eyr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vm6q"]
+atlas = ExtResource("1_v2eyr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8burj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovri5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vm6q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="Node2D"]
+z_index = 10
+script = ExtResource("1_j8snq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8burj")
+frame_progress = 0.0627039
