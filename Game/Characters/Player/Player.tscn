@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ceu1aad752bbm"]
+[gd_scene load_steps=8 format=3 uid="uid://ceu1aad752bbm"]
 
 [ext_resource type="Script" path="res://Game/Characters/Player/Player.gd" id="1_j8snq"]
 [ext_resource type="Texture2D" uid="uid://cknueq28oge4l" path="res://Assets/Sprites/Characters/baldy.png" id="1_v2eyr"]
@@ -25,11 +25,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ppoyq"]
+radius = 31.0
+height = 94.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gkf37"]
+radius = 9.0
+height = 66.0
+
+[node name="Player" type="RigidBody2D"]
 z_index = 10
 script = ExtResource("1_j8snq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8burj")
-frame_progress = 0.0627039
+frame_progress = 0.311374
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ppoyq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 39)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gkf37")
