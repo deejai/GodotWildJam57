@@ -43,7 +43,7 @@ func _process(delta):
 		elif is_instance_valid(held_object):
 			held_object.set_state(GrabbableObject.State.GROUNDED)
 			held_object.reparent(get_parent())
-			held_object.position += direction * 100.0
+			held_object.position += direction * 25.0
 			held_object = null
 
 	var x_move = Input.get_axis("Move Left", "Move Right")
