@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddpdnvpefu12m"]
+
+[ext_resource type="Texture2D" uid="uid://sqcflauhel21" path="res://Assets/Sprites/Objects/Pot.png" id="2_khaq0"]
+
+[node name="Vase" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_khaq0")

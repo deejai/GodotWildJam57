@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://do6dvm7a7ju3o"]
+
+[ext_resource type="Script" path="res://Game/Characters/Player/HUD.gd" id="1_q4fbt"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_q4fbt")
+
+[node name="PickupLabel" type="Label" parent="."]
+visible = false
+offset_left = 925.0
+offset_top = 537.0
+offset_right = 1006.0
+offset_bottom = 563.0
+text = "Pick Up (E)"
