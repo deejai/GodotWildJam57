@@ -40,6 +40,7 @@ func _process(delta):
 				held_object = obj
 				held_object.reparent(self)
 				held_object.position = Vector2.ZERO
+				update_held_object_visuals()
 		elif is_instance_valid(held_object):
 			held_object.set_state(GrabbableObject.State.GROUNDED)
 			held_object.reparent(get_parent())
@@ -51,11 +52,47 @@ func _process(delta):
 
 	if x_move != 0.0 or y_move != 0.0:
 		if absf(x_move) > absf(y_move):
-			direction = Vector2.LEFT if x_move < 0 else Vector2.RIGHT
+			if x_move < 0:
+				direction = Vector2.LEFT
+				if is_instance_valid(held_object):
+					sprite.animation = "walk_left_holding"
+					update_held_object_visuals()
+				else:
+					sprite.animation = "walk_left"
+			else:
+				direction = Vector2.RIGHT
+				if is_instance_valid(held_object):
+					sprite.animation = "walk_right_holding"
+					update_held_object_visuals()
+				else:
+					sprite.animation = "walk_right"
 		else:
-			direction = Vector2.UP if y_move < 0 else Vector2.DOWN
+			if y_move < 0:
+				direction = Vector2.UP
+				if is_instance_valid(held_object):
+					sprite.animation = "walk_up_holding"
+					update_held_object_visuals()
+				else:
+					sprite.animation = "walk_up"
+			else:
+				direction = Vector2.DOWN
+				if is_instance_valid(held_object):
+					sprite.animation = "walk_down_holding"
+					update_held_object_visuals()
+				else:
+					sprite.animation = "walk_down"
 
 		grab_ray.rotation = direction.angle()
+	else:
+		match direction:
+			Vector2.LEFT:
+				sprite.animation = "idle_left" + ("_holding" if is_instance_valid(held_object) else "")
+			Vector2.RIGHT:
+				sprite.animation = "idle_right" + ("_holding" if is_instance_valid(held_object) else "")
+			Vector2.UP:
+				sprite.animation = "idle_up" + ("_holding" if is_instance_valid(held_object) else "")
+			Vector2.DOWN:
+				sprite.animation = "idle_down" + ("_holding" if is_instance_valid(held_object) else "")
 
 	linear_velocity = Vector2(x_move, y_move) * 75.0
 
@@ -79,6 +116,24 @@ func throw():
 
 func _on_lag_fix_1_timeout():
 	throw_charge_node.visible = false
+
+func update_held_object_visuals():
+	match(direction):
+		Vector2.LEFT:
+			held_object.position = Vector2(-15.0, 0.0)
+			held_object.z_index = -10
+
+		Vector2.RIGHT:
+			held_object.position = Vector2(15.0, 0.0)
+			held_object.z_index = -10
+
+		Vector2.UP:
+			held_object.position = Vector2.ZERO
+			held_object.z_index = -10
+
+		Vector2.DOWN:
+			held_object.position = Vector2.ZERO
+			held_object.z_index = 20
 
 func can_throw():
 	if is_instance_valid(held_object) and held_object.is_throwable:
