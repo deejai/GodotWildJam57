@@ -19,7 +19,7 @@ var flight_velocity: Vector2 = Vector2.ZERO
 var total_flight_duration: float = 0.0
 var flight_time_elapsed: float = 0.0
 
-@export var payload: Callable = func(): print("BLAM!")
+var payload: Callable = func(): print("BLAM!")
 
 func set_state(state: State):
 	self.state = state
