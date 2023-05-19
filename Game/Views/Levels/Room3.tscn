@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dodhjyn07g57l"]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="1_wdrkr"]
-[ext_resource type="Texture2D" uid="uid://cyl4372r1d6nj" path="res://Assets/Sprites/Tiles/sheet.png" id="2_q67ww"]
+[ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="2_q67ww"]
 [ext_resource type="Texture2D" uid="uid://caw6vfikbq6xh" path="res://Assets/Sprites/Tiles/tile_ice_floor.png" id="3_eqgat"]
 [ext_resource type="Texture2D" uid="uid://y6x57iukmpcr" path="res://Assets/Sprites/Tiles/pressure_plate.png" id="4_4plbv"]
-[ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/Relic.tscn" id="5_eadkl"]
+[ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/GrabbableObject/Relic.tscn" id="5_eadkl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n0e4h"]
 texture = ExtResource("2_q67ww")

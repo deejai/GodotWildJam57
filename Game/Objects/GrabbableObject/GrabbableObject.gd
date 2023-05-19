@@ -33,11 +33,10 @@ func set_state(state: State):
 			static_body.collision_layer = 0b0
 			static_body.collision_mask = 0b0
 			sprite.scale = original_sprite_scale
-			z_index = 15
 		State.THROWN:
 			static_body.collision_layer = 0b1000
 			static_body.collision_mask = 0b1000
-			z_index = 15
+			z_index = 20
 
 func _ready():
 	original_sprite_scale = sprite.scale

@@ -44,15 +44,15 @@ func _process(delta):
 		elif is_instance_valid(held_object):
 			held_object.set_state(GrabbableObject.State.GROUNDED)
 			held_object.reparent(get_parent())
-			held_object.position += direction * 25.0
+			held_object.position += direction * (25.0 if direction.x != 0.0 else 50.0)
+			held_object.z_index = 10
 			held_object = null
 
-	var x_move = Input.get_axis("Move Left", "Move Right")
-	var y_move = Input.get_axis("Move Up", "Move Down")
+	var move_vec = Vector2(Input.get_axis("Move Left", "Move Right"), Input.get_axis("Move Up", "Move Down")).normalized()
 
-	if x_move != 0.0 or y_move != 0.0:
-		if absf(x_move) > absf(y_move):
-			if x_move < 0:
+	if move_vec.x != 0.0 or move_vec.y != 0.0:
+		if absf(move_vec.x) > absf(move_vec.y):
+			if move_vec.x < 0:
 				direction = Vector2.LEFT
 				if is_instance_valid(held_object):
 					sprite.animation = "walk_left_holding"
@@ -67,7 +67,7 @@ func _process(delta):
 				else:
 					sprite.animation = "walk_right"
 		else:
-			if y_move < 0:
+			if move_vec.y < 0:
 				direction = Vector2.UP
 				if is_instance_valid(held_object):
 					sprite.animation = "walk_up_holding"
@@ -94,7 +94,7 @@ func _process(delta):
 			Vector2.DOWN:
 				sprite.animation = "idle_down" + ("_holding" if is_instance_valid(held_object) else "")
 
-	linear_velocity = Vector2(x_move, y_move) * 75.0
+	linear_velocity = move_vec * 75.0
 
 func reset_throw_charge():
 	charging_throw = false
@@ -111,6 +111,7 @@ func throw():
 	if is_instance_valid(held_object):
 		held_object.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 2.0)
 		held_object.reparent(get_parent())
+		held_object.z_index = 20
 		held_object = null
 	reset_throw_charge()
 

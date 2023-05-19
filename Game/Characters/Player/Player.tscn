@@ -362,14 +362,15 @@ shader = ExtResource("3_ayxbo")
 shader_parameter/throw_charge = 0.0
 
 [node name="Player" type="RigidBody2D"]
-z_index = 10
+z_index = 15
 lock_rotation = true
 script = ExtResource("1_j8snq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8burj")
 animation = &"idle_right"
-frame_progress = 0.204149
+frame_progress = 0.635504
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

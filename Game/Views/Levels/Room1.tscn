@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://q8ul42shu8sc"]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="1_m5pp4"]
-[ext_resource type="Texture2D" uid="uid://cyl4372r1d6nj" path="res://Assets/Sprites/Tiles/sheet.png" id="2_ironr"]
-[ext_resource type="PackedScene" uid="uid://bdxlevbyy02bj" path="res://Game/Objects/Pot.tscn" id="3_w2mg3"]
+[ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="2_ironr"]
+[ext_resource type="PackedScene" uid="uid://bdxlevbyy02bj" path="res://Game/Objects/GrabbableObject/Pot.tscn" id="3_w2mg3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n0e4h"]
 texture = ExtResource("2_ironr")
@@ -10,6 +10,13 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_6ey6l"]
 tile_size = Vector2i(32, 32)
