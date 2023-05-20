@@ -28,15 +28,23 @@ var sliding_bounds_rect: Rect2
 func land(impact: Impact):
 	var landing_surface: LandingSurface = Main.object_registry.get_landing_surface_at_point(position)
 
-	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type != LandingSurface.Type.CUSHION):
+	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type not in [LandingSurface.Type.CUSHION, LandingSurface.Type.BOUNCER]):
 		queue_free()
 		var kabloom = load("res://Game/Objects/Kablam.tscn").instantiate()
 		kabloom.position = position
 		get_parent().add_child(kabloom)
-	else:
+	elif landing_surface and landing_surface.type == LandingSurface.Type.CUSHION:
 		print("floof")
-
-	set_state(State.GROUNDED)
+		set_state(State.GROUNDED)
+	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
+		print("boing!")
+		set_state(State.THROWN)
+	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
+		print("schweeee!")
+		set_state(State.SLIDING)
+	else:
+		print("plop.")
+		set_state(State.GROUNDED)
 
 func set_state(state: State):
 	self.state = state
