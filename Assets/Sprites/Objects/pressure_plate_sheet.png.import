@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6cbrnsumcg83"
-path="res://.godot/imported/sheet.png-a3e0500c3d131cc7eb08241ccde15ed2.ctex"
+uid="uid://b2hdovov2gosd"
+path="res://.godot/imported/pressure_plate_sheet.png-273dab9ef39de1803c5bd132ebe57878.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Tiles/sheet.png"
-dest_files=["res://.godot/imported/sheet.png-a3e0500c3d131cc7eb08241ccde15ed2.ctex"]
+source_file="res://Assets/Sprites/Objects/pressure_plate_sheet.png"
+dest_files=["res://.godot/imported/pressure_plate_sheet.png-273dab9ef39de1803c5bd132ebe57878.ctex"]
 
 [params]
 

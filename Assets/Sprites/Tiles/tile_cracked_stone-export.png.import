@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6cbrnsumcg83"
-path="res://.godot/imported/sheet.png-a3e0500c3d131cc7eb08241ccde15ed2.ctex"
+uid="uid://qih6mjfk1rdb"
+path="res://.godot/imported/tile_cracked_stone-export.png-a1d3ec2967697d6244e9d59382b5dc68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Tiles/sheet.png"
-dest_files=["res://.godot/imported/sheet.png-a3e0500c3d131cc7eb08241ccde15ed2.ctex"]
+source_file="res://Assets/Sprites/Tiles/tile_cracked_stone-export.png"
+dest_files=["res://.godot/imported/tile_cracked_stone-export.png-a1d3ec2967697d6244e9d59382b5dc68.ctex"]
 
 [params]
 

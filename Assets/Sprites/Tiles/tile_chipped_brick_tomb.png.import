@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6cbrnsumcg83"
-path="res://.godot/imported/sheet.png-a3e0500c3d131cc7eb08241ccde15ed2.ctex"
+uid="uid://dr5lr86c6htt0"
+path="res://.godot/imported/tile_chipped_brick_tomb.png-e41ec70bb3d3e5b22ff63e1353bca577.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Tiles/sheet.png"
-dest_files=["res://.godot/imported/sheet.png-a3e0500c3d131cc7eb08241ccde15ed2.ctex"]
+source_file="res://Assets/Sprites/Tiles/tile_chipped_brick_tomb.png"
+dest_files=["res://.godot/imported/tile_chipped_brick_tomb.png-e41ec70bb3d3e5b22ff63e1353bca577.ctex"]
 
 [params]
 

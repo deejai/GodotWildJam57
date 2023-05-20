@@ -1,5 +1,8 @@
 extends Node2D
 
+var object_registry: ObjectRegistry = ObjectRegistry.new()
+var player: Player
+
 func _ready():
 	pass # Replace with function body.
 

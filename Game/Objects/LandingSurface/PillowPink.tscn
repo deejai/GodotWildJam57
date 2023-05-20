@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccp5k1ffifgkj"]
+
+[ext_resource type="PackedScene" uid="uid://brl78ord5jj3v" path="res://Game/Objects/LandingSurface/LandingSurface.tscn" id="1_wugty"]
+[ext_resource type="Texture2D" uid="uid://cwyd57cqscjxq" path="res://Assets/Sprites/Objects/pillow_pink.png" id="2_hog03"]
+
+[node name="LandingSurface" instance=ExtResource("1_wugty")]
+priority = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_hog03")
