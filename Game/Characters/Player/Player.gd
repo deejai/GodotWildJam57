@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+class_name Player
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var throw_charge_node: Node2D = $ThrowChargeNode
 @onready var throw_charge_material: Material = $ThrowChargeNode/Foreground.material
@@ -17,6 +19,7 @@ var held_object: GrabbableObject = null
 var direction: Vector2 = Vector2.DOWN
 
 func _ready():
+	Main.player = self
 	sprite.play()
 
 func _process(delta):
@@ -121,11 +124,11 @@ func _on_lag_fix_1_timeout():
 func update_held_object_visuals():
 	match(direction):
 		Vector2.LEFT:
-			held_object.position = Vector2(-15.0, 0.0)
+			held_object.position = Vector2(-35.0, 0.0)
 			held_object.z_index = -10
 
 		Vector2.RIGHT:
-			held_object.position = Vector2(15.0, 0.0)
+			held_object.position = Vector2(35.0, 0.0)
 			held_object.z_index = -10
 
 		Vector2.UP:
@@ -133,7 +136,7 @@ func update_held_object_visuals():
 			held_object.z_index = -10
 
 		Vector2.DOWN:
-			held_object.position = Vector2.ZERO
+			held_object.position = Vector2(0.0, 20.0)
 			held_object.z_index = 20
 
 func can_throw():

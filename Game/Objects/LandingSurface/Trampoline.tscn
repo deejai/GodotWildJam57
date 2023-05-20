@@ -1,16 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bukrr07myww6w"]
+[gd_scene load_steps=3 format=3 uid="uid://cub4umt6a4ylh"]
 
+[ext_resource type="PackedScene" uid="uid://brl78ord5jj3v" path="res://Game/Objects/LandingSurface/LandingSurface.tscn" id="1_1tcrr"]
 [ext_resource type="Texture2D" uid="uid://f08o0t7w1k2v" path="res://Assets/Sprites/Objects/trampoline.png" id="1_cuny5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tjr6q"]
-radius = 32.0624
+[node name="LandingSurface" instance=ExtResource("1_1tcrr")]
+type = 1
+priority = 5
 
-[node name="Trampoline" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 texture = ExtResource("1_cuny5")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_tjr6q")

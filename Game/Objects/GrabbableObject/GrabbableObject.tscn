@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://dsc6c5i4tdia8"]
 
 [ext_resource type="Script" path="res://Game/Objects/GrabbableObject/GrabbableObject.gd" id="1_1kl2y"]
 

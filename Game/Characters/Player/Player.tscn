@@ -362,7 +362,7 @@ shader = ExtResource("3_ayxbo")
 shader_parameter/throw_charge = 0.0
 
 [node name="Player" type="RigidBody2D"]
-z_index = 15
+y_sort_enabled = true
 lock_rotation = true
 script = ExtResource("1_j8snq")
 
