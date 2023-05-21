@@ -67,267 +67,356 @@ position = Vector2(858, 334)
 
 [node name="WorterColumn1" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(32, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn3" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(160, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn4" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(224, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn4" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn5" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(288, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn5" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn6" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(352, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn7" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(416, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn7" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn8" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(480, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn9" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(544, 32)
+active = true
 
 [node name="Worter2" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
 
 [node name="Worter10" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
+active = true
 
 [node name="WorterColumn2" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(96, 96)
+active = true
 
 [node name="Worter2" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 64)
+active = true
 
 [node name="Worter3" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 128)
+active = true
 
 [node name="Worter4" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
+active = true
 
 [node name="Worter5" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 252)
+active = true
 
 [node name="Worter6" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
+active = true
 
 [node name="Worter7" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 380)
+active = true
 
 [node name="Worter8" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 444)
+active = true
 
 [node name="Worter9" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
+active = true
