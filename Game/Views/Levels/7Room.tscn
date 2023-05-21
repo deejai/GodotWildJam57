@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwgdu6efvat7s"]
+[gd_scene load_steps=8 format=3 uid="uid://iw1ews2im1s4"]
 
 [ext_resource type="PackedScene" uid="uid://ccp5k1ffifgkj" path="res://Game/Objects/LandingSurface/PillowPink.tscn" id="1_2rcuf"]
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="1_okyuw"]
