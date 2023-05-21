@@ -22,6 +22,11 @@ func _ready():
 	Main.main_menu = false
 	Main.player = self
 	sprite.play()
+	var p = AudioStreamPlayer.new()
+	add_child(p)
+	p.volume_db = -6
+	p.stream = load("res://Assets/SFX/Sounds-Tomb Randy - victory laugh 1.wav")
+	p.play()
 
 func _process(delta):
 	if charging_throw:
