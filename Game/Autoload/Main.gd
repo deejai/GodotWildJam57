@@ -3,6 +3,7 @@ extends Node2D
 var object_registry: ObjectRegistry = ObjectRegistry.new()
 var player: Player
 var relic: GrabbableObject
+var game_over: bool = false
 
 func _ready():
 	pass # Replace with function body.

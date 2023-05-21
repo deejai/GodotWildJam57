@@ -9,6 +9,7 @@ height = 58.0
 
 [node name="Relic" node_paths=PackedStringArray("sprite", "static_body") instance=ExtResource("1_m3aja")]
 is_throwable = true
+is_breakable = null
 is_relic = true
 sprite = NodePath("Sprite2D")
 static_body = NodePath("StaticBody2D")
