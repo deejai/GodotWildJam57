@@ -21,13 +21,14 @@ offset_right = 1006.0
 offset_bottom = 563.0
 text = "Pick Up (E)"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_top = 457.0
-offset_right = 479.0
+[node name="HelpText" type="RichTextLabel" parent="."]
+offset_top = 429.0
+offset_right = 586.0
 offset_bottom = 577.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Press E to pickup/drop stuff and to flip levers
+Hold left click to charge and release to throw (right click to cancel)
 [color=cornflowerblue]Press Q to teleport to blue relic[/color] [color=red]
 The red relic explodes on impact[/color] [color=green]
 The green relic splits when thrown[/color] [color=orange]
@@ -51,3 +52,9 @@ shape = SubResource("WorldBoundaryShape2D_ulob4")
 position = Vector2(1026, 577)
 rotation = -1.57079
 shape = SubResource("WorldBoundaryShape2D_uqxfa")
+
+[node name="HelpTextHint" type="RichTextLabel" parent="."]
+offset_top = 537.0
+offset_right = 243.0
+offset_bottom = 577.0
+text = "Press H to toggle help text"

@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsc6c5i4tdia8"]
+[gd_scene load_steps=3 format=3 uid="uid://dsc6c5i4tdia8"]
 
 [ext_resource type="Script" path="res://Game/Objects/GrabbableObject/GrabbableObject.gd" id="1_1kl2y"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_q5f8e"]
+radius = 16.0
+
 [node name="GrabbableObject" type="Node2D"]
 script = ExtResource("1_1kl2y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_q5f8e")
