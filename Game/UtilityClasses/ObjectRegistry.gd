@@ -1,16 +1,19 @@
 
 class_name ObjectRegistry
 
-var landingSurfaceRegistry: Dictionary = {}
+var landing_surface_registry: Dictionary = {}
 
 func get_landing_surface_at_point(position: Vector2):
 	var surface = null
 	var highest_priority = -1
 
-	for key in landingSurfaceRegistry.keys():
-		var obj: LandingSurface = landingSurfaceRegistry[key]
+	for key in landing_surface_registry.keys():
+		var obj: LandingSurface = landing_surface_registry[key]
 		if not is_instance_valid(obj):
-			landingSurfaceRegistry.erase(key)
+			landing_surface_registry.erase(key)
+			continue
+
+		if not obj.active:
 			continue
 
 		if obj.has_point(position):
@@ -26,10 +29,10 @@ func get_landing_surface_at_point(position: Vector2):
 	return surface
 
 func register_landing_surface(obj: LandingSurface):
-	landingSurfaceRegistry[obj.get_instance_id()] = obj
+	landing_surface_registry[obj.get_instance_id()] = obj
 
 func unregister_landing_surface(obj: LandingSurface):
-	landingSurfaceRegistry.erase(obj.get_instance_id())
+	landing_surface_registry.erase(obj.get_instance_id())
 
 func reset():
-	landingSurfaceRegistry = {}
+	landing_surface_registry = {}

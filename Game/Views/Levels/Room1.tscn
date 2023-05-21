@@ -46,61 +46,51 @@ shape = SubResource("RectangleShape2D_ktpgx")
 [node name="LandingSurface" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(95, 288)
 
 [node name="LandingSurface2" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(95, 192)
 
 [node name="LandingSurface3" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(95, 97)
 
 [node name="LandingSurface4" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(159, 384)
 
 [node name="LandingSurface5" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(254, 384)
 
 [node name="LandingSurface6" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(351, 384)
 
 [node name="LandingSurface7" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(447, 386)
 
 [node name="LandingSurface8" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(511, 289)
 
 [node name="LandingSurface9" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(607, 288)
 
 [node name="LandingSurface10" parent="." instance=ExtResource("4_7ujab")]
 z_index = 5
 z_as_relative = true
-y_sort_enabled = false
 position = Vector2(671, 160)
 
 [node name="Kablam" parent="." instance=ExtResource("5_g7usw")]

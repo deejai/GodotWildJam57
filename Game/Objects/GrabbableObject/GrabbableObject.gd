@@ -18,17 +18,20 @@ var state: State = State.GROUNDED
 
 enum Impact {SOFT, HARD}
 
-var flight_velocity: Vector2 = Vector2.ZERO
+var velocity: Vector2 = Vector2.ZERO
+
+var last_flight_duration: float = 0.0
 var total_flight_duration: float = 0.0
 var flight_time_elapsed: float = 0.0
 
 var sliding_bounds_origin: Vector2
 var sliding_bounds_rect: Rect2
+var sliding_linger: float = 0.0
 
 func land(impact: Impact):
 	var landing_surface: LandingSurface = Main.object_registry.get_landing_surface_at_point(position)
 
-	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type not in [LandingSurface.Type.CUSHION, LandingSurface.Type.BOUNCER]):
+	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type not in [LandingSurface.Type.CUSHION, LandingSurface.Type.BOUNCER, LandingSurface.Type.SLIDER]):
 		queue_free()
 		var kabloom = load("res://Game/Objects/Kablam.tscn").instantiate()
 		kabloom.position = position
@@ -38,9 +41,13 @@ func land(impact: Impact):
 		set_state(State.GROUNDED)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
-		set_state(State.THROWN)
+		var bounce_velocity = 100.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
+		throw(bounce_velocity, 1.0)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
 		print("schweeee!")
+		sliding_bounds_origin = landing_surface.position
+		sliding_bounds_rect = landing_surface.area_rect
+		sliding_linger = 0.3
 		set_state(State.SLIDING)
 	else:
 		print("plop.")
@@ -54,11 +61,13 @@ func set_state(state: State):
 			static_body.collision_layer = collision_layer_bits
 			static_body.collision_mask = collision_mask_bits
 			sprite.scale = original_sprite_scale
+			velocity = Vector2.ZERO
 			z_index = 0
 		State.GRABBED:
 			static_body.collision_layer = 0b0
 			static_body.collision_mask = 0b0
 			sprite.scale = original_sprite_scale
+			velocity = Vector2.ZERO
 		State.THROWN:
 			static_body.collision_layer = 0b1000
 			static_body.collision_mask = 0b1000
@@ -82,7 +91,7 @@ func _process(delta):
 	match(state):
 		State.THROWN:
 			print("im bring thrown!")
-			position += flight_velocity * delta
+			position += velocity * delta
 			flight_time_elapsed += delta
 
 			if flight_time_elapsed >= total_flight_duration:
@@ -92,15 +101,20 @@ func _process(delta):
 				sprite.scale = original_sprite_scale * (1.0 + 0.5 * calc_throw_elevation())
 		State.SLIDING:
 			if sliding_bounds_rect.has_point(position - sliding_bounds_origin):
-				pass
+				# keep sliding
+				position += velocity * delta
 			else:
-				land(Impact.SOFT)
+				sliding_linger = max(0.0, sliding_linger - delta)
+				if sliding_linger > 0.0:
+					position += velocity * delta
+				else:
+					land(Impact.SOFT)
 
 func calc_throw_elevation():
 	return -pow(2*clampf(flight_time_elapsed/total_flight_duration, 0.0, 1.0)-1,2)+1
 
-func throw(flight_velocity: Vector2, total_flight_duration: float):
-	self.flight_velocity = flight_velocity
+func throw(velocity: Vector2, total_flight_duration: float):
+	self.velocity = velocity
 	self.total_flight_duration = total_flight_duration
 	flight_time_elapsed = 0.0
 	set_state(State.THROWN)

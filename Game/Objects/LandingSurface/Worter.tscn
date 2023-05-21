@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://cntr5wfwmhm5c"]
+
+[ext_resource type="PackedScene" uid="uid://brl78ord5jj3v" path="res://Game/Objects/LandingSurface/LandingSurface.tscn" id="1_3f4n5"]
+[ext_resource type="Texture2D" uid="uid://da6xw5evvhkby" path="res://Assets/Sprites/Objects/worter.png" id="2_snbqg"]
+[ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="3_laa05"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwnna"]
+atlas = ExtResource("2_snbqg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy0a1"]
+atlas = ExtResource("2_snbqg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnegq"]
+atlas = ExtResource("2_snbqg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dtrt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwnna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy0a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnegq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LandingSurface" instance=ExtResource("1_3f4n5")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_dtrt0")
+script = ExtResource("3_laa05")

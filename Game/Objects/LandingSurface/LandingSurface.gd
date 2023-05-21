@@ -6,6 +6,7 @@ enum Type {CUSHION, BOUNCER, SLIDER, WATER, FIRE}
 
 @export var type: Type
 @export var priority: int
+@export var active: bool = true
 
 const area_rect: Rect2 = Rect2(-32, -32, 64, 64)
 

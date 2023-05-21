@@ -125,15 +125,15 @@ func update_held_object_visuals():
 	match(direction):
 		Vector2.LEFT:
 			held_object.position = Vector2(-35.0, 0.0)
-			held_object.z_index = -10
+			held_object.z_index = -1
 
 		Vector2.RIGHT:
 			held_object.position = Vector2(35.0, 0.0)
-			held_object.z_index = -10
+			held_object.z_index = -1
 
 		Vector2.UP:
 			held_object.position = Vector2.ZERO
-			held_object.z_index = -10
+			held_object.z_index = -1
 
 		Vector2.DOWN:
 			held_object.position = Vector2(0.0, 20.0)
