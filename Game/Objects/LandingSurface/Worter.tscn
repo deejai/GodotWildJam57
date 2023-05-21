@@ -34,12 +34,9 @@ animations = [{
 }]
 
 [node name="Worter" instance=ExtResource("1_3f4n5")]
-<<<<<<< HEAD
 z_index = -6
-=======
 type = 3
 active = false
->>>>>>> 5ef5bf7832e12a2aaa43c7216a51a76188f55958
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_dtrt0")

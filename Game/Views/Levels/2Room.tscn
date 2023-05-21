@@ -22,15 +22,12 @@ sources/0 = SubResource("TileSetAtlasSource_em03y")
 
 [node name="Room" type="Node2D"]
 
-<<<<<<< HEAD
-=======
 [node name="Pot" parent="." instance=ExtResource("1_dp6ok")]
 y_sort_enabled = true
 position = Vector2(177, 345)
 is_breakable = true
 is_relic = false
 
->>>>>>> 5ef5bf7832e12a2aaa43c7216a51a76188f55958
 [node name="Player" parent="." instance=ExtResource("2_kn12l")]
 position = Vector2(863, 507)
 
