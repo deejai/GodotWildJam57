@@ -38,6 +38,11 @@ func land(impact: Impact):
 	var landing_surface: LandingSurface = Main.object_registry.get_landing_surface_at_point(position)
 
 	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type not in [LandingSurface.Type.CUSHION, LandingSurface.Type.BOUNCER, LandingSurface.Type.SLIDER, LandingSurface.Type.PRESSURE_PLATE]):
+		var p = AudioStreamPlayer.new()
+		get_parent().add_child(p)
+		p.volume_db = -6
+		p.stream = load("res://Assets/SFX/Sounds-Tomb Randy - relic breaking.wav")
+		p.play()
 		queue_free()
 		var kabloom = load("res://Game/Objects/Kablam.tscn").instantiate()
 		kabloom.position = position
@@ -67,6 +72,11 @@ func land(impact: Impact):
 			Main.destroy_pressure_plate_walls()
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
+		var p = AudioStreamPlayer.new()
+		add_child(p)
+		p.volume_db = -6
+		p.stream = load("res://Assets/SFX/Sounds-Tomb Randy - boing.mp3")
+		p.play()
 		var bounce_velocity: Vector2 = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
 		if bounce_velocity.length_squared() < velocity.length_squared():
 			bounce_velocity = velocity
