@@ -18,4 +18,11 @@ offset_right = 576.0
 offset_bottom = 304.0
 text = "Enter the Tomb"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 220.0
+offset_top = 354.0
+offset_right = 864.0
+offset_bottom = 406.0
+text = "Carefully hurl these dangerous and fragile relics through the tomb to escape safely!"
+
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
