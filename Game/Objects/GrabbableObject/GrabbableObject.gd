@@ -41,8 +41,10 @@ func land(impact: Impact):
 		set_state(State.GROUNDED)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
-		var bounce_velocity = 100.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
-		throw(bounce_velocity, 1.0)
+		var bounce_velocity = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
+		if bounce_velocity < velocity:
+			bounce_velocity = velocity
+		throw(bounce_velocity, max(1.0, last_flight_duration))
 	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
 		print("schweeee!")
 		sliding_bounds_origin = landing_surface.position
@@ -116,5 +118,6 @@ func calc_throw_elevation():
 func throw(velocity: Vector2, total_flight_duration: float):
 	self.velocity = velocity
 	self.total_flight_duration = total_flight_duration
+	self.last_flight_duration = total_flight_duration
 	flight_time_elapsed = 0.0
 	set_state(State.THROWN)
