@@ -11,7 +11,7 @@ class_name Player
 @onready var hud: PlayerHUD = $HUD
 
 var charging_throw: bool = false
-const THROW_CHARGE_TIME: float = 2.0
+const THROW_CHARGE_TIME: float = 1.5
 var throw_charge: float = 0.0
 
 var held_object: GrabbableObject = null
@@ -28,7 +28,7 @@ func _process(delta):
 			reset_throw_charge()
 		elif Input.is_action_pressed("Charge Throw"):
 			throw_charge = min(1.0, throw_charge + delta / THROW_CHARGE_TIME)
-			throw_charge_material.set_shader_parameter("throw_charge", (1.0/3.334)*log(throw_charge+.035)+0.99)
+			throw_charge_material.set_shader_parameter("throw_charge", throw_charge)
 		else:
 			throw()
 	else:
@@ -119,7 +119,7 @@ func start_charging_throw():
 
 func throw():
 	if is_instance_valid(held_object):
-		held_object.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 2.0)
+		held_object.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 1.0 + throw_charge)
 		held_object.reparent(get_parent())
 		held_object.z_index = 20
 		held_object = null
