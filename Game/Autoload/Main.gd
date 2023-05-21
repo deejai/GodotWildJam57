@@ -9,7 +9,7 @@ var split_relic_shard1: GrabbableObject
 var split_relic_shard2: GrabbableObject
 var boomerang_relic: GrabbableObject
 var game_over: bool = false
-var game_over_timer: float = 5.0
+var game_over_timer: float = 2.0
 
 var level_index: int = 0
 var level_arr: Array = [
