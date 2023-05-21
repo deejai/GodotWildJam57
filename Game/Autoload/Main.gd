@@ -15,6 +15,13 @@ var level_index: int = 0
 var level_arr: Array = [
 	load("res://Game/Views/Levels/1Room.tscn"),
 	load("res://Game/Views/Levels/2Room.tscn"),
+	load("res://Game/Views/Levels/3Room.tscn"),
+	load("res://Game/Views/Levels/4Room.tscn"),
+	load("res://Game/Views/Levels/5Room.tscn"),
+	load("res://Game/Views/Levels/6Room.tscn"),
+	load("res://Game/Views/Levels/7Room.tscn"),
+	load("res://Game/Views/Levels/8Room.tscn"),
+	load("res://Game/Views/Levels/9Room.tscn"),
 ]
 
 func _ready():
