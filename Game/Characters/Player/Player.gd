@@ -50,6 +50,13 @@ func _process(delta):
 			held_object.position += direction * (25.0 if direction.x != 0.0 else 50.0)
 			held_object.z_index = 10
 			held_object = null
+	elif Input.is_action_just_pressed("TeleportToRelic"):
+		if is_instance_valid(Main.relic) and not is_instance_valid(held_object):
+			position = Main.relic.position
+			held_object = Main.relic
+			held_object.reparent(self)
+			held_object.position = Vector2.ZERO
+			update_held_object_visuals()
 
 	var move_vec = Vector2(Input.get_axis("Move Left", "Move Right"), Input.get_axis("Move Up", "Move Down")).normalized()
 
@@ -97,7 +104,7 @@ func _process(delta):
 			Vector2.DOWN:
 				sprite.animation = "idle_down" + ("_holding" if is_instance_valid(held_object) else "")
 
-	linear_velocity = move_vec * 75.0
+	linear_velocity = move_vec * 125.0
 
 func reset_throw_charge():
 	charging_throw = false
