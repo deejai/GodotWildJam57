@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5n7aonqg4p3r"
+path="res://.godot/imported/Sounds-Tomb Randy - smash.wav-8ed351d26cb259aabb6eed323f89bf5c.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Sounds-Tomb Randy - smash.wav"
+dest_files=["res://.godot/imported/Sounds-Tomb Randy - smash.wav-8ed351d26cb259aabb6eed323f89bf5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

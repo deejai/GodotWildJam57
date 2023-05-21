@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dj0d7ormplu17"
+path="res://.godot/imported/Sounds-Tomb Randy - victory laugh 1.wav-9cf67f347779d11923ef45b71eadd7fa.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Sounds-Tomb Randy - victory laugh 1.wav"
+dest_files=["res://.godot/imported/Sounds-Tomb Randy - victory laugh 1.wav-9cf67f347779d11923ef45b71eadd7fa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

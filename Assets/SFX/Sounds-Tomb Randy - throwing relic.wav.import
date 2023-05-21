@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ce1kjbv4vji56"
+path="res://.godot/imported/Sounds-Tomb Randy - throwing relic.wav-8d7d2e6df04ca794e6e1197bc9c97e8a.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Sounds-Tomb Randy - throwing relic.wav"
+dest_files=["res://.godot/imported/Sounds-Tomb Randy - throwing relic.wav-8d7d2e6df04ca794e6e1197bc9c97e8a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

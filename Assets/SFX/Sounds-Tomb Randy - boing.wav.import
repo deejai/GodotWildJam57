@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://s6qehmqhimyy"
+path="res://.godot/imported/Sounds-Tomb Randy - boing.wav-5290d0bbd176d1b78998724a7f1c866e.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Sounds-Tomb Randy - boing.wav"
+dest_files=["res://.godot/imported/Sounds-Tomb Randy - boing.wav-5290d0bbd176d1b78998724a7f1c866e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
