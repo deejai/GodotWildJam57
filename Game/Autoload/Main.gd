@@ -35,11 +35,10 @@ static func toggle_fullscreen():
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
-func set_ground_water(active: bool):
+func set_ground_water(is_active: bool):
 	for obj in object_registry.landing_surface_registry.values():
 		if is_instance_valid(obj) and obj.type == LandingSurface.Type.WATER:
-			obj.active = active
-			obj.visible = active
+			obj.set_active(is_active)
 
 func reset_level_params():
 	object_registry.reset()

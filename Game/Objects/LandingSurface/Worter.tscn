@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cntr5wfwmhm5c"]
+[gd_scene load_steps=9 format=3 uid="uid://cntr5wfwmhm5c"]
 
 [ext_resource type="PackedScene" uid="uid://brl78ord5jj3v" path="res://Game/Objects/LandingSurface/LandingSurface.tscn" id="1_3f4n5"]
 [ext_resource type="Texture2D" uid="uid://da6xw5evvhkby" path="res://Assets/Sprites/Objects/worter.png" id="2_snbqg"]
@@ -33,6 +33,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nby0d"]
+size = Vector2(64, 64)
+
 [node name="Worter" instance=ExtResource("1_3f4n5")]
 z_index = -6
 type = 3
@@ -41,3 +44,8 @@ active = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_dtrt0")
 script = ExtResource("3_laa05")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+shape = SubResource("RectangleShape2D_nby0d")
