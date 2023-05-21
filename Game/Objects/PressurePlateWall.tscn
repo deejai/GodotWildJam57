@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn4x0prq1fhwd"]
+
+[ext_resource type="Script" path="res://Game/Objects/PressurePlateWall.gd" id="1_a38bp"]
+[ext_resource type="Texture2D" uid="uid://dr5lr86c6htt0" path="res://Assets/Sprites/Tiles/tile_chipped_brick_tomb.png" id="1_vttm3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kewgs"]
+size = Vector2(64, 64)
+
+[node name="PressurePlateWall" type="Node2D"]
+script = ExtResource("1_a38bp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_kewgs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.282353, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_vttm3")
