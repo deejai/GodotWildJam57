@@ -54,7 +54,7 @@ func _process(delta):
 			held_object = null
 	elif Input.is_action_just_pressed("TeleportToRelic"):
 		if is_instance_valid(Main.relic) and not is_instance_valid(held_object) and Main.relic.state == GrabbableObject.State.GROUNDED:
-			position = Main.relic.position
+			position = Main.relic.position + Vector2(0.0, -40.0)
 			Main.relic.set_state(GrabbableObject.State.GRABBED)
 			held_object = Main.relic
 			held_object.reparent(self)

@@ -61,6 +61,7 @@ func land(impact: Impact):
 	elif landing_surface and landing_surface.type == LandingSurface.Type.CUSHION:
 		last_flight_duration = 0.0
 		print("floof")
+		position = landing_surface.position
 		set_state(State.GROUNDED)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
