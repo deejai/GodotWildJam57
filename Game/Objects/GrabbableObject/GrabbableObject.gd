@@ -37,6 +37,7 @@ func land(impact: Impact):
 		kabloom.position = position
 		get_parent().add_child(kabloom)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.CUSHION:
+		last_flight_duration = 0.0
 		print("floof")
 		set_state(State.GROUNDED)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
@@ -46,6 +47,7 @@ func land(impact: Impact):
 			bounce_velocity = velocity
 		throw(bounce_velocity, max(1.0, last_flight_duration))
 	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
+		last_flight_duration = 0.0
 		print("schweeee!")
 		sliding_bounds_origin = landing_surface.position
 		sliding_bounds_rect = landing_surface.area_rect
