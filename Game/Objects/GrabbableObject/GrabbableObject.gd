@@ -41,7 +41,9 @@ func land(impact: Impact):
 		set_state(State.GROUNDED)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
-		var bounce_velocity = 100.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
+		var bounce_velocity = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
+		if bounce_velocity < velocity:
+			bounce_velocity = velocity
 		throw(bounce_velocity, 1.0)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
 		print("schweeee!")
