@@ -19,6 +19,7 @@ var held_object: GrabbableObject = null
 var direction: Vector2 = Vector2.DOWN
 
 func _ready():
+	Main.main_menu = false
 	Main.player = self
 	sprite.play()
 

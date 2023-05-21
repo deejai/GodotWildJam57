@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmpcobnjujwjo"
+path="res://.godot/imported/Sounds-Tomb Randy - error laugh.wav-0268d1e9410179d29b9de5b508cb8990.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Sounds-Tomb Randy - error laugh.wav"
+dest_files=["res://.godot/imported/Sounds-Tomb Randy - error laugh.wav-0268d1e9410179d29b9de5b508cb8990.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
