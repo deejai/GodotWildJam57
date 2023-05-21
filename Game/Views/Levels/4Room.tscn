@@ -61,5 +61,11 @@ position = Vector2(543, 379)
 [node name="Coushin8" parent="." instance=ExtResource("3_www4v")]
 position = Vector2(541, 280)
 
-[node name="LandingSurface" parent="." instance=ExtResource("4_jelmt")]
+[node name="PressurePlate" parent="." instance=ExtResource("4_jelmt")]
 position = Vector2(90, 56)
+
+[node name="PressurePlate2" parent="." instance=ExtResource("4_jelmt")]
+position = Vector2(993, 157)
+
+[node name="PressurePlate3" parent="." instance=ExtResource("4_jelmt")]
+position = Vector2(991, 410)
