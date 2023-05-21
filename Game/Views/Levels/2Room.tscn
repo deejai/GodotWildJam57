@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://nk4gm2b0pyw7"]
+[gd_scene load_steps=12 format=3 uid="uid://nk4gm2b0pyw7"]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_kn12l"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_cxbo5"]
 [ext_resource type="PackedScene" uid="uid://cntr5wfwmhm5c" path="res://Game/Objects/LandingSurface/Worter.tscn" id="5_5luqu"]
 [ext_resource type="PackedScene" uid="uid://bvnejtprkm370" path="res://Game/Objects/LandingSurface/PressurePlate.tscn" id="5_21e4a"]
 [ext_resource type="PackedScene" uid="uid://tqj2f1cblc12" path="res://Game/Objects/GrabbableObject/RelicThatBoomerangs.tscn" id="6_cpb7e"]
+[ext_resource type="PackedScene" uid="uid://bn4x0prq1fhwd" path="res://Game/Objects/PressurePlateWall.tscn" id="6_ikgv1"]
+[ext_resource type="PackedScene" uid="uid://e50hu51sti0e" path="res://Game/Objects/Exit.tscn" id="7_7xu6l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
 texture = ExtResource("3_cxbo5")
@@ -123,3 +125,33 @@ position = Vector2(616, 72)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-72, -8)
 shape = SubResource("RectangleShape2D_m6py3")
+
+[node name="PressurePlateWall" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(992, 160)
+
+[node name="PressurePlateWall2" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(928, 160)
+
+[node name="PressurePlateWall3" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(864, 160)
+
+[node name="PressurePlateWall4" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(864, 224)
+
+[node name="PressurePlateWall5" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(864, 288)
+
+[node name="PressurePlateWall6" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(864, 352)
+
+[node name="PressurePlateWall7" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(864, 416)
+
+[node name="PressurePlateWall8" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(928, 416)
+
+[node name="PressurePlateWall9" parent="." instance=ExtResource("6_ikgv1")]
+position = Vector2(992, 416)
+
+[node name="Exit" parent="." instance=ExtResource("7_7xu6l")]
+position = Vector2(992, 288)
