@@ -8,8 +8,10 @@ var split_relic: GrabbableObject
 var split_relic_shard1: GrabbableObject
 var split_relic_shard2: GrabbableObject
 var boomerang_relic: GrabbableObject
+var pressure_plate_walls: Array = []
 var game_over: bool = false
 var game_over_timer: float = 2.0
+var main_menu: bool = true
 
 var level_index: int = 0
 var level_arr: Array = [
@@ -30,7 +32,7 @@ func _ready():
 func _process(delta):
 	Main.toggle_fullscreen()
 
-	if not game_over and not is_instance_valid(player):
+	if not main_menu and not game_over and not is_instance_valid(player):
 		game_over_timer -= delta
 		if game_over_timer <= 0.0:
 			load_current_level()
@@ -47,6 +49,14 @@ func set_ground_water(is_active: bool):
 		if is_instance_valid(obj) and obj.type == LandingSurface.Type.WATER:
 			obj.set_active(is_active)
 
+
+func destroy_pressure_plate_walls():
+	for wall in pressure_plate_walls:
+		if is_instance_valid(wall):
+			wall.queue_free()
+
+	pressure_plate_walls = []
+
 func reset_level_params():
 	object_registry.reset()
 	relic = null
@@ -55,7 +65,10 @@ func reset_level_params():
 	split_relic_shard1 = null
 	split_relic_shard2 = null
 	boomerang_relic = null
+	pressure_plate_walls = []
+	game_over = false
 	game_over_timer = 2.0
+	main_menu = false
 
 func load_current_level():
 	reset_level_params()

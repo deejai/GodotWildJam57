@@ -37,7 +37,7 @@ var hover_time: float = 0.0
 func land(impact: Impact):
 	var landing_surface: LandingSurface = Main.object_registry.get_landing_surface_at_point(position)
 
-	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type not in [LandingSurface.Type.CUSHION, LandingSurface.Type.BOUNCER, LandingSurface.Type.SLIDER]):
+	if impact == Impact.HARD and is_breakable and (landing_surface == null or landing_surface.type not in [LandingSurface.Type.CUSHION, LandingSurface.Type.BOUNCER, LandingSurface.Type.SLIDER, LandingSurface.Type.PRESSURE_PLATE]):
 		queue_free()
 		var kabloom = load("res://Game/Objects/Kablam.tscn").instantiate()
 		kabloom.position = position
@@ -58,11 +58,13 @@ func land(impact: Impact):
 				snake.position = position + Vector2.RIGHT * offset_mult * 50.0
 				snake.rotation = randf() * 2 * PI
 				get_parent().add_child(snake)
-	elif landing_surface and landing_surface.type == LandingSurface.Type.CUSHION:
+	elif landing_surface and landing_surface.type in [LandingSurface.Type.CUSHION, LandingSurface.Type.PRESSURE_PLATE]:
 		last_flight_duration = 0.0
 		print("floof")
 		position = landing_surface.position
 		set_state(State.GROUNDED)
+		if landing_surface.type == LandingSurface.Type.PRESSURE_PLATE:
+			Main.destroy_pressure_plate_walls()
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
 		var bounce_velocity: Vector2 = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)

@@ -2,7 +2,7 @@ extends Node2D
 
 class_name LandingSurface
 
-enum Type {CUSHION, BOUNCER, SLIDER, WATER, FIRE}
+enum Type {CUSHION, BOUNCER, SLIDER, WATER, FIRE, PRESSURE_PLATE}
 
 @export var type: Type
 @export var priority: int
