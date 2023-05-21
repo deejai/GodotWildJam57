@@ -13,4 +13,3 @@ func _process(delta):
 	if Input.is_action_just_pressed("ToggleHelp"):
 		show_help = !show_help
 		$HelpText.visible = show_help
-		$HelpTextHint.visible = !show_help

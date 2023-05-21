@@ -54,7 +54,8 @@ rotation = -1.57079
 shape = SubResource("WorldBoundaryShape2D_uqxfa")
 
 [node name="HelpTextHint" type="RichTextLabel" parent="."]
+offset_left = 872.0
 offset_top = 537.0
-offset_right = 243.0
+offset_right = 1115.0
 offset_bottom = 577.0
 text = "Press H to toggle help text"
