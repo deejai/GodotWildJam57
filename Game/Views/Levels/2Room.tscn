@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_kn12l"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_cxbo5"]
-[ext_resource type="PackedScene" uid="uid://ccp5k1ffifgkj" path="res://Game/Objects/LandingSurface/PillowPink.tscn" id="4_2oq23"]
+[ext_resource type="PackedScene" uid="uid://cntr5wfwmhm5c" path="res://Game/Objects/LandingSurface/Worter.tscn" id="5_5luqu"]
 [ext_resource type="PackedScene" uid="uid://bvnejtprkm370" path="res://Game/Objects/LandingSurface/PressurePlate.tscn" id="5_21e4a"]
-[ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/GrabbableObject/Relic.tscn" id="5_k13w6"]
+[ext_resource type="PackedScene" uid="uid://tqj2f1cblc12" path="res://Game/Objects/GrabbableObject/RelicThatBoomerangs.tscn" id="6_cpb7e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
 texture = ExtResource("3_cxbo5")
@@ -23,7 +23,7 @@ sources/0 = SubResource("TileSetAtlasSource_em03y")
 [node name="Room" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_kn12l")]
-position = Vector2(863, 507)
+position = Vector2(557, 508)
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
@@ -33,34 +33,74 @@ z_as_relative = false
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_fv7fw")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 0, 131072, 0, 0, 196608, 196608, 0, 262144, 131072, 0, 327680, 196608, 0, 393216, 196608, 0, 458752, 196608, 0, 524288, 196608, 0, 524289, 196608, 0, 524290, 196608, 0, 524291, 196608, 0, 524292, 196608, 0, 524293, 196608, 0, 524294, 196608, 0, 524295, 196608, 0, 524296, 196608, 0, 524297, 196608, 0, 524298, 196608, 0, 524299, 196608, 0, 524300, 196608, 0, 524301, 131072, 0, 524302, 196608, 0, 524303, 196608, 0, 524304, 196608, 0, 393232, 196608, 0, 458768, 196608, 0, 327696, 196608, 0, 262160, 131072, 0, 196624, 196608, 0, 131088, 196608, 0, 131087, 196608, 0, 65551, 196608, 0, 15, 196608, 0, 16, 196608, 0, 65552, 196608, 0, 14, 196608, 0, 13, 196608, 0, 12, 196608, 0, 11, 196608, 0, 10, 196608, 0, 9, 196608, 0, 8, 196608, 0, 7, 196608, 0, 6, 196608, 0, 5, 196608, 0, 4, 196608, 0, 3, 196608, 0, 2, 196608, 0, 1, 196608, 0, 262152, 196608, 0, 196616, 196608, 0, 131080, 196608, 0, 65544, 196608, 0, 65543, 196608, 0, 65542, 196608, 0, 65541, 196608, 0, 65540, 196608, 0, 65539, 196608, 0, 65538, 196608, 0, 65537, 196608, 0, 131073, 0, 0, 196609, 196608, 0, 262145, 196608, 0, 327681, 196608, 0, 393217, 196608, 0, 458753, 196608, 0, 458754, 196608, 0, 393218, 196608, 0, 327682, 196608, 0, 262146, 196608, 0, 196610, 196608, 0, 131074, 0, 0, 131075, 0, 0, 196611, 196608, 0, 262147, 196608, 0, 327683, 196608, 0, 393219, 196608, 0, 458755, 196608, 0, 458756, 196608, 0, 393220, 196608, 0, 327684, 196608, 0, 262148, 196608, 0, 196612, 196608, 0, 131076, 0, 0, 131077, 0, 0, 196613, 196608, 0, 262149, 196608, 0, 327685, 196608, 0, 393221, 196608, 0, 458757, 196608, 0, 458758, 196608, 0, 393222, 196608, 0, 327686, 196608, 0, 262150, 196608, 0, 196614, 196608, 0, 131078, 196608, 0, 131079, 196608, 0, 196615, 196608, 0, 262151, 196608, 0, 327687, 196608, 0, 393223, 196608, 0, 458759, 196608, 0, 458760, 196608, 0, 393224, 196608, 0, 327688, 196608, 0, 327689, 196608, 0, 262153, 196608, 0, 196617, 196608, 0, 131081, 196608, 0, 65545, 196608, 0, 65546, 196608, 0, 131082, 196608, 0, 196618, 196608, 0, 262154, 196608, 0, 327690, 196608, 0, 393226, 196608, 0, 393225, 196608, 0, 458761, 196608, 0, 458762, 196608, 0, 458763, 196608, 0, 393227, 196608, 0, 327691, 196608, 0, 262155, 196608, 0, 196619, 196608, 0, 131083, 196608, 0, 65547, 196608, 0, 65548, 196608, 0, 131084, 196608, 0, 196620, 196608, 0, 262156, 196608, 0, 327692, 196608, 0, 393228, 196608, 0, 458764, 196608, 0, 458765, 196608, 0, 393229, 196608, 0, 327693, 196608, 0, 262157, 196608, 0, 196621, 196608, 0, 131085, 196608, 0, 65549, 196608, 0, 65550, 196608, 0, 131086, 196608, 0, 196622, 196608, 0, 262158, 196608, 0, 327694, 196608, 0, 393230, 196608, 0, 458766, 196608, 0, 458767, 196608, 0, 393231, 196608, 0, 327695, 196608, 0, 262159, 196608, 0, 196623, 196608, 0)
-
-[node name="Coushin1" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(863, 473)
-
-[node name="Coushin8" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(526, 287)
-
-[node name="Coushin2" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(837, 286)
-
-[node name="Coushin3" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(989, 289)
-
-[node name="Coushin4" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(641, 382)
-
-[node name="Coushin5" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(460, 287)
-
-[node name="Coushin6" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(268, 286)
-
-[node name="Coushin7" parent="." instance=ExtResource("4_2oq23")]
-position = Vector2(94, 289)
+layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 0, 131072, 0, 0, 196608, 196608, 0, 262144, 196608, 0, 327680, 196608, 0, 393216, 196608, 0, 458752, 196608, 0, 524288, 196608, 0, 524289, 196608, 0, 524290, 196608, 0, 524291, 196608, 0, 524292, 196608, 0, 524293, 196608, 0, 524294, 196608, 0, 524295, 196608, 0, 524296, 196608, 0, 524297, 196608, 0, 524298, 196608, 0, 524299, 196608, 0, 524300, 196608, 0, 524301, 196608, 0, 524302, 196608, 0, 524303, 196608, 0, 524304, 196608, 0, 393232, 196608, 0, 458768, 196608, 0, 327696, 196608, 0, 262160, 196608, 0, 196624, 196608, 0, 131088, 196608, 0, 131087, 0, 0, 65551, 196608, 0, 15, 196608, 0, 16, 196608, 0, 65552, 196608, 0, 14, 196608, 0, 13, 196608, 0, 12, 196608, 0, 11, 196608, 0, 10, 196608, 0, 9, 196608, 0, 8, 0, 0, 7, 196608, 0, 6, 196608, 0, 5, 196608, 0, 4, 196608, 0, 3, 196608, 0, 2, 196608, 0, 1, 196608, 0, 262152, 196608, 0, 196616, 196608, 0, 131080, 196608, 0, 65544, 0, 0, 65543, 196608, 0, 65542, 196608, 0, 65541, 196608, 0, 65540, 196608, 0, 65539, 196608, 0, 65538, 196608, 0, 65537, 196608, 0, 131073, 0, 0, 196609, 196608, 0, 262145, 196608, 0, 327681, 196608, 0, 393217, 196608, 0, 458753, 196608, 0, 458754, 196608, 0, 393218, 196608, 0, 327682, 196608, 0, 262146, 196608, 0, 196610, 196608, 0, 131074, 0, 0, 131075, 0, 0, 196611, 196608, 0, 262147, 196608, 0, 327683, 196608, 0, 393219, 196608, 0, 458755, 196608, 0, 458756, 196608, 0, 393220, 196608, 0, 327684, 196608, 0, 262148, 196608, 0, 196612, 196608, 0, 131076, 0, 0, 131077, 0, 0, 196613, 196608, 0, 262149, 196608, 0, 327685, 196608, 0, 393221, 196608, 0, 458757, 196608, 0, 458758, 196608, 0, 393222, 196608, 0, 327686, 196608, 0, 262150, 196608, 0, 196614, 196608, 0, 131078, 196608, 0, 131079, 196608, 0, 196615, 196608, 0, 262151, 196608, 0, 327687, 196608, 0, 393223, 196608, 0, 458759, 196608, 0, 458760, 196608, 0, 393224, 196608, 0, 327688, 196608, 0, 327689, 196608, 0, 262153, 196608, 0, 196617, 196608, 0, 131081, 196608, 0, 65545, 196608, 0, 65546, 196608, 0, 131082, 196608, 0, 196618, 196608, 0, 262154, 196608, 0, 327690, 196608, 0, 393226, 196608, 0, 393225, 196608, 0, 458761, 196608, 0, 458762, 196608, 0, 458763, 196608, 0, 393227, 196608, 0, 327691, 196608, 0, 262155, 196608, 0, 196619, 196608, 0, 131083, 196608, 0, 65547, 196608, 0, 65548, 196608, 0, 131084, 196608, 0, 196620, 196608, 0, 262156, 196608, 0, 327692, 196608, 0, 393228, 196608, 0, 458764, 196608, 0, 458765, 196608, 0, 393229, 0, 0, 327693, 0, 0, 262157, 0, 0, 196621, 0, 0, 131085, 0, 0, 65549, 196608, 0, 65550, 196608, 0, 131086, 0, 0, 196622, 196608, 0, 262158, 196608, 0, 327694, 196608, 0, 393230, 0, 0, 458766, 196608, 0, 458767, 196608, 0, 393231, 0, 0, 327695, 196608, 0, 262159, 131072, 0, 196623, 196608, 0)
 
 [node name="LandingSurface" parent="." instance=ExtResource("5_21e4a")]
 position = Vector2(91, 61)
 
-[node name="Relic" parent="." instance=ExtResource("5_k13w6")]
-position = Vector2(866, 475)
+[node name="RelicThatBoomerangs" parent="." instance=ExtResource("6_cpb7e")]
+position = Vector2(572, 276)
+
+[node name="WorterColumn" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(32, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn2" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(96, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn2" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn3" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(160, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn3" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn4" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(224, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn4" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn5" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(288, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn5" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn6" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(352, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn6" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn7" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(416, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn7" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
+
+[node name="WorterColumn8" parent="." instance=ExtResource("5_5luqu")]
+position = Vector2(480, 32)
+active = true
+
+[node name="Worter" parent="WorterColumn8" instance=ExtResource("5_5luqu")]
+position = Vector2(0, 64)
+active = true
