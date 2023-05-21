@@ -342,9 +342,6 @@ active = true
 position = Vector2(0, 572)
 active = true
 
-[node name="Exit Coushin" parent="." instance=ExtResource("4_qugo0")]
-z_index = 0
-position = Vector2(96, 32)
-
 [node name="Exit" parent="." instance=ExtResource("6_umye6")]
+z_index = -1
 position = Vector2(96, 32)
