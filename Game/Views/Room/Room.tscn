@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkqws4cdyasv4"]
+[gd_scene load_steps=10 format=3 uid="uid://bkqws4cdyasv4"]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_4af13"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_iooea"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccp5k1ffifgkj" path="res://Game/Objects/LandingSurface/PillowPink.tscn" id="4_fexuw"]
 [ext_resource type="PackedScene" uid="uid://cctetdo5cuxlp" path="res://Game/Objects/LandingSurface/IceBlock.tscn" id="5_1g1kq"]
 [ext_resource type="PackedScene" uid="uid://cub4umt6a4ylh" path="res://Game/Objects/LandingSurface/Trampoline.tscn" id="6_xyog1"]
+[ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/GrabbableObject/Relic.tscn" id="7_oa7ov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
 texture = ExtResource("3_iooea")
@@ -65,3 +66,6 @@ position = Vector2(704, 213)
 
 [node name="LandingSurface5" parent="." instance=ExtResource("6_xyog1")]
 position = Vector2(839, 213)
+
+[node name="Relic" parent="." instance=ExtResource("7_oa7ov")]
+position = Vector2(492, 488)
