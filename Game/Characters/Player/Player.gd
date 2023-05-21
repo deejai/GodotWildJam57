@@ -53,6 +53,7 @@ func _process(delta):
 	elif Input.is_action_just_pressed("TeleportToRelic"):
 		if is_instance_valid(Main.relic) and not is_instance_valid(held_object):
 			position = Main.relic.position
+			Main.relic.set_state(GrabbableObject.State.GRABBED)
 			held_object = Main.relic
 			held_object.reparent(self)
 			held_object.position = Vector2.ZERO
