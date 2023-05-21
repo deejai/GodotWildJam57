@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bkqws4cdyasv4"]
+[gd_scene load_steps=17 format=3 uid="uid://bkqws4cdyasv4"]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_4af13"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_iooea"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://tqj2f1cblc12" path="res://Game/Objects/GrabbableObject/RelicThatBoomerangs.tscn" id="11_7p6x3"]
 [ext_resource type="PackedScene" uid="uid://62tkdrukxewm" path="res://Game/Objects/ExplodableWall.tscn" id="12_8oh43"]
 [ext_resource type="PackedScene" uid="uid://b58oblldxbbkc" path="res://Game/Objects/WaterLever.tscn" id="13_k63qp"]
+[ext_resource type="PackedScene" uid="uid://e50hu51sti0e" path="res://Game/Objects/Exit.tscn" id="14_qkx4h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
 texture = ExtResource("3_iooea")
@@ -126,3 +127,6 @@ position = Vector2(368, 384)
 
 [node name="WaterLever" parent="." instance=ExtResource("13_k63qp")]
 position = Vector2(464, 400)
+
+[node name="Exit" parent="." instance=ExtResource("14_qkx4h")]
+position = Vector2(40, 248)

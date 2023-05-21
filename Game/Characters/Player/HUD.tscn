@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://do6dvm7a7ju3o"]
+[gd_scene load_steps=6 format=3 uid="uid://do6dvm7a7ju3o"]
 
 [ext_resource type="Script" path="res://Game/Characters/Player/HUD.gd" id="1_q4fbt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x4dmj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4ucw5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ulob4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uqxfa"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_q4fbt")
@@ -21,5 +29,24 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[color=cornflowerblue]Press Q: Teleport to blue relic[/color] [color=red]
 The red relic explodes on impact[/color] [color=green]
-The green relic splits when thrown. Press T to recall it[/color] [color=orange]
+The green relic splits when thrown[/color] [color=orange]
 Press F to change the course of the orange relic in air[/color]"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+rotation = 1.57079
+shape = SubResource("WorldBoundaryShape2D_x4dmj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_4ucw5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 577)
+shape = SubResource("WorldBoundaryShape2D_ulob4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1026, 577)
+rotation = -1.57079
+shape = SubResource("WorldBoundaryShape2D_uqxfa")
