@@ -44,6 +44,8 @@ func _process(delta):
 				held_object.reparent(self)
 				held_object.position = Vector2.ZERO
 				update_held_object_visuals()
+			elif obj == true:
+				pass
 		elif is_instance_valid(held_object):
 			held_object.set_state(GrabbableObject.State.GROUNDED)
 			held_object.reparent(get_parent())

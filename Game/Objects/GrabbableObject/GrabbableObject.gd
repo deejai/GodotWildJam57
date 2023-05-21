@@ -43,8 +43,8 @@ func land(impact: Impact):
 		set_state(State.GROUNDED)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.BOUNCER:
 		print("boing!")
-		var bounce_velocity = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
-		if bounce_velocity < velocity:
+		var bounce_velocity: Vector2 = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
+		if bounce_velocity.length_squared() < velocity.length_squared():
 			bounce_velocity = velocity
 		throw(bounce_velocity, max(1.0, last_flight_duration))
 	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
@@ -52,7 +52,7 @@ func land(impact: Impact):
 		print("schweeee!")
 		sliding_bounds_origin = landing_surface.position
 		sliding_bounds_rect = landing_surface.area_rect
-		sliding_linger = 0.3
+		sliding_linger = 0.15
 		set_state(State.SLIDING)
 	else:
 		print("plop.")
