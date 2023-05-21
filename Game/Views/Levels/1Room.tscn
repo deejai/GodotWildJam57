@@ -22,7 +22,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_em03y")
 
-[node name="Room2" type="Node2D"]
+[node name="Room3" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_4rw6f")]
 position = Vector2(862, 506)

@@ -33,6 +33,9 @@ func _process(delta):
 	Main.toggle_fullscreen()
 
 	if not main_menu and not game_over and not is_instance_valid(player):
+		game_over = true
+
+	if game_over:
 		game_over_timer -= delta
 		if game_over_timer <= 0.0:
 			load_current_level()

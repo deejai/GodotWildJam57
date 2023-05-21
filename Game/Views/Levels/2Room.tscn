@@ -28,7 +28,7 @@ size = Vector2(384, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6py3"]
 size = Vector2(64, 128)
 
-[node name="Room" type="Node2D"]
+[node name="Room2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_kn12l")]
 position = Vector2(557, 508)

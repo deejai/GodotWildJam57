@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://ct23wlsvilm3h"]
+[gd_scene load_steps=2 format=3 uid="uid://ct23wlsvilm3h"]
+
+[ext_resource type="Script" path="res://Game/Autoload/SoundBoard.gd" id="1_ttcvx"]
 
 [node name="SoundBoard" type="Node2D"]
+script = ExtResource("1_ttcvx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
