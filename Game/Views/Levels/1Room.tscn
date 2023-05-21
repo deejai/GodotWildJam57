@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ba5elj8lr7nku"]
+[gd_scene load_steps=10 format=3 uid="uid://ba5elj8lr7nku"]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_4rw6f"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_kg7tw"]
 [ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/GrabbableObject/Relic.tscn" id="4_m4160"]
 [ext_resource type="PackedScene" uid="uid://ccp5k1ffifgkj" path="res://Game/Objects/LandingSurface/PillowPink.tscn" id="4_qugo0"]
 [ext_resource type="PackedScene" uid="uid://cntr5wfwmhm5c" path="res://Game/Objects/LandingSurface/Worter.tscn" id="5_fpe4j"]
+[ext_resource type="PackedScene" uid="uid://qv7vce3oc8mk" path="res://Game/Objects/WorterSprite.tscn" id="6_ff0ls"]
 [ext_resource type="PackedScene" uid="uid://e50hu51sti0e" path="res://Game/Objects/Exit.tscn" id="6_umye6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
@@ -114,10 +115,6 @@ active = true
 position = Vector2(0, 64)
 active = true
 
-[node name="Worter3" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 128)
-active = true
-
 [node name="Worter4" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
 active = true
@@ -128,10 +125,6 @@ active = true
 
 [node name="Worter6" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 316)
-active = true
-
-[node name="Worter7" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 380)
 active = true
 
 [node name="Worter8" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
@@ -145,6 +138,12 @@ active = true
 [node name="Worter10" parent="WorterColumn3" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
 active = true
+
+[node name="WorterSprite" parent="WorterColumn3" instance=ExtResource("6_ff0ls")]
+position = Vector2(0, 128)
+
+[node name="WorterSprite2" parent="WorterColumn3" instance=ExtResource("6_ff0ls")]
+position = Vector2(0, 380)
 
 [node name="WorterColumn4" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(224, 32)
@@ -234,10 +233,6 @@ active = true
 position = Vector2(0, 64)
 active = true
 
-[node name="Worter3" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 128)
-active = true
-
 [node name="Worter4" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
 active = true
@@ -254,10 +249,6 @@ active = true
 position = Vector2(0, 380)
 active = true
 
-[node name="Worter8" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 444)
-active = true
-
 [node name="Worter9" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 508)
 active = true
@@ -265,6 +256,12 @@ active = true
 [node name="Worter10" parent="WorterColumn6" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
 active = true
+
+[node name="WorterSprite2" parent="WorterColumn6" instance=ExtResource("6_ff0ls")]
+position = Vector2(0, 128)
+
+[node name="WorterSprite3" parent="WorterColumn6" instance=ExtResource("6_ff0ls")]
+position = Vector2(0, 444)
 
 [node name="WorterColumn7" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(416, 32)
@@ -314,10 +311,6 @@ active = true
 position = Vector2(0, 64)
 active = true
 
-[node name="Worter3" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 128)
-active = true
-
 [node name="Worter4" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 192)
 active = true
@@ -345,6 +338,9 @@ active = true
 [node name="Worter10" parent="WorterColumn8" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
 active = true
+
+[node name="WorterSprite2" parent="WorterColumn8" instance=ExtResource("6_ff0ls")]
+position = Vector2(0, 128)
 
 [node name="WorterColumn9" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(544, 32)
@@ -422,9 +418,9 @@ active = true
 position = Vector2(0, 508)
 active = true
 
-[node name="Exit" parent="." instance=ExtResource("6_umye6")]
-position = Vector2(96, 31)
+[node name="Exit Coushin" parent="." instance=ExtResource("4_qugo0")]
+z_index = 0
+position = Vector2(96, 32)
 
-[node name="Exit Coushin" parent="Exit" instance=ExtResource("4_qugo0")]
-visible = false
-position = Vector2(1, 2)
+[node name="Exit" parent="." instance=ExtResource("6_umye6")]
+position = Vector2(96, 32)
