@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://62tkdrukxewm"]
+
+[ext_resource type="Script" path="res://Game/Objects/ExplodableWall.gd" id="1_c1knl"]
+[ext_resource type="Texture2D" uid="uid://dr5lr86c6htt0" path="res://Assets/Sprites/Tiles/tile_chipped_brick_tomb.png" id="2_48lbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_co444"]
+size = Vector2(64, 64)
+
+[node name="ExplodableWall" type="Node2D"]
+z_index = -5
+script = ExtResource("1_c1knl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.607843, 1, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_48lbg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_co444")

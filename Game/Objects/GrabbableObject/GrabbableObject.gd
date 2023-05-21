@@ -9,6 +9,9 @@ const collision_mask_bits = 0b1
 @export var is_breakable: bool = true
 @export var is_relic: bool = false
 
+enum RelicPower {NONE, TELEPORT, BOOMERANG, EXPLODE, SPLIT, SHARD}
+@export var relic_power: RelicPower = RelicPower.NONE
+
 @export var sprite: Sprite2D
 var original_sprite_scale: Vector2
 
@@ -36,7 +39,23 @@ func land(impact: Impact):
 		queue_free()
 		var kabloom = load("res://Game/Objects/Kablam.tscn").instantiate()
 		kabloom.position = position
+		if relic_power == RelicPower.EXPLODE:
+			kabloom.scale = Vector2(2,2)
+			var blast_radius: Area2D = get_node("BlastRadius")
+			for obj in blast_radius.get_overlapping_bodies():
+				if obj.get_parent() is ExplodableWall:
+					var wall_obj: ExplodableWall = obj.get_parent()
+					var obj_kabloom = load("res://Game/Objects/Kablam.tscn").instantiate()
+					obj_kabloom.position = wall_obj.position
+					get_parent().add_child(obj_kabloom)
+					wall_obj.queue_free()
 		get_parent().add_child(kabloom)
+		if is_relic and relic_power not in [RelicPower.EXPLODE]:
+			for offset_mult in [-1, 0, 1]:
+				var snake = load("res://Game/Objects/DemonSnake.tscn").instantiate()
+				snake.position = position + Vector2.RIGHT * offset_mult * 50.0
+				snake.rotation = randf() * 2 * PI
+				get_parent().add_child(snake)
 	elif landing_surface and landing_surface.type == LandingSurface.Type.CUSHION:
 		last_flight_duration = 0.0
 		print("floof")
@@ -86,7 +105,23 @@ func set_state(state: State):
 func _ready():
 	original_sprite_scale = sprite.scale
 	if is_relic:
-		Main.relic = self
+		match(relic_power):
+			RelicPower.TELEPORT:
+				Main.relic = self
+			RelicPower.SPLIT:
+				Main.split_relic = self
+			RelicPower.EXPLODE:
+				Main.explode_relic = self
+			RelicPower.BOOMERANG:
+				Main.boomerang_relic = self
+			RelicPower.SHARD:
+				if is_instance_valid(Main.split_relic_shard1):
+					Main.split_relic_shard2 = self
+				else:
+					Main.split_relic_shard1 = self
+			_:
+				printerr("Invalid relic power")
+				assert(false)
 
 func _process(delta):
 	if is_instance_valid(Main.player) and state == State.GROUNDED:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkqws4cdyasv4"]
+[gd_scene load_steps=16 format=3 uid="uid://bkqws4cdyasv4"]
 
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_4af13"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_iooea"]
@@ -8,7 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cub4umt6a4ylh" path="res://Game/Objects/LandingSurface/Trampoline.tscn" id="6_xyog1"]
 [ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/GrabbableObject/Relic.tscn" id="7_oa7ov"]
 [ext_resource type="PackedScene" uid="uid://cntr5wfwmhm5c" path="res://Game/Objects/LandingSurface/Worter.tscn" id="8_hj5tk"]
-[ext_resource type="PackedScene" uid="uid://byxw2vaa1iy20" path="res://Game/Objects/DemonSnake.tscn" id="9_pqj5k"]
+[ext_resource type="PackedScene" uid="uid://b6hravsm32igm" path="res://Game/Objects/GrabbableObject/RelicThatSplits.tscn" id="9_mu3m6"]
+[ext_resource type="PackedScene" uid="uid://dbq81wgrvwx86" path="res://Game/Objects/GrabbableObject/RelicThatExplodes.tscn" id="10_ufuqk"]
+[ext_resource type="PackedScene" uid="uid://tqj2f1cblc12" path="res://Game/Objects/GrabbableObject/RelicThatBoomerangs.tscn" id="11_7p6x3"]
+[ext_resource type="PackedScene" uid="uid://62tkdrukxewm" path="res://Game/Objects/ExplodableWall.tscn" id="12_8oh43"]
+[ext_resource type="PackedScene" uid="uid://b58oblldxbbkc" path="res://Game/Objects/WaterLever.tscn" id="13_k63qp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
 texture = ExtResource("3_iooea")
@@ -108,5 +112,17 @@ position = Vector2(896, 384)
 [node name="Worter11" parent="." instance=ExtResource("8_hj5tk")]
 position = Vector2(960, 384)
 
-[node name="DemonSnake" parent="." instance=ExtResource("9_pqj5k")]
-rotation = -0.0236602
+[node name="RelicThatSplits" parent="." instance=ExtResource("9_mu3m6")]
+position = Vector2(104, 88)
+
+[node name="RelicThatExplodes" parent="." instance=ExtResource("10_ufuqk")]
+position = Vector2(248, 456)
+
+[node name="RelicThatBoomerangs" parent="." instance=ExtResource("11_7p6x3")]
+position = Vector2(480, 96)
+
+[node name="ExplodableWall" parent="." instance=ExtResource("12_8oh43")]
+position = Vector2(368, 384)
+
+[node name="WaterLever" parent="." instance=ExtResource("13_k63qp")]
+position = Vector2(464, 400)

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbq81wgrvwx86"]
+
+[ext_resource type="PackedScene" uid="uid://dsc6c5i4tdia8" path="res://Game/Objects/GrabbableObject/GrabbableObject.tscn" id="1_uwkn7"]
+[ext_resource type="Texture2D" uid="uid://b3lcrsxv3bj7b" path="res://Assets/Sprites/Objects/RelicThatExplodes.png" id="2_7g7si"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmna8"]
+radius = 20.0
+height = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_344yx"]
+radius = 78.6384
+
+[node name="RelicThatExplodes" node_paths=PackedStringArray("sprite", "static_body") instance=ExtResource("1_uwkn7")]
+is_throwable = true
+is_relic = true
+relic_power = 3
+sprite = NodePath("Sprite2D")
+static_body = NodePath("StaticBody2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(-1, -3)
+scale = Vector2(2, 2)
+texture = ExtResource("2_7g7si")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+shape = SubResource("CapsuleShape2D_pmna8")
+
+[node name="BlastRadius" type="Area2D" parent="." index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastRadius" index="0"]
+shape = SubResource("CircleShape2D_344yx")

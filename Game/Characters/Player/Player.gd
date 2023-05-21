@@ -44,8 +44,8 @@ func _process(delta):
 				held_object.reparent(self)
 				held_object.position = Vector2.ZERO
 				update_held_object_visuals()
-			elif obj == true:
-				pass
+			elif obj is WaterLever:
+				obj.flip()
 		elif is_instance_valid(held_object):
 			held_object.set_state(GrabbableObject.State.GROUNDED)
 			held_object.reparent(get_parent())
@@ -53,13 +53,15 @@ func _process(delta):
 			held_object.z_index = 10
 			held_object = null
 	elif Input.is_action_just_pressed("TeleportToRelic"):
-		if is_instance_valid(Main.relic) and not is_instance_valid(held_object):
+		if is_instance_valid(Main.relic) and not is_instance_valid(held_object) and Main.relic.state == GrabbableObject.State.GROUNDED:
 			position = Main.relic.position
 			Main.relic.set_state(GrabbableObject.State.GRABBED)
 			held_object = Main.relic
 			held_object.reparent(self)
 			held_object.position = Vector2.ZERO
 			update_held_object_visuals()
+	elif Input.is_action_just_pressed("ChangeCourseOfOrangeRelic"):
+		pass
 
 	var move_vec = Vector2(Input.get_axis("Move Left", "Move Right"), Input.get_axis("Move Up", "Move Down")).normalized()
 

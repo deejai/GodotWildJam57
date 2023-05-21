@@ -12,6 +12,8 @@ const area_rect: Rect2 = Rect2(-32, -32, 64, 64)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if type == Type.WATER:
+		visible = active
 	Main.object_registry.register_landing_surface(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
