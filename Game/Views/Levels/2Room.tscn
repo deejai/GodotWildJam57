@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://nk4gm2b0pyw7"]
 
-[ext_resource type="PackedScene" uid="uid://bdxlevbyy02bj" path="res://Game/Objects/GrabbableObject/Pot.tscn" id="1_dp6ok"]
 [ext_resource type="PackedScene" uid="uid://ceu1aad752bbm" path="res://Game/Characters/Player/Player.tscn" id="2_kn12l"]
 [ext_resource type="Texture2D" uid="uid://c6cbrnsumcg83" path="res://Assets/Sprites/Tiles/sheet.png" id="3_cxbo5"]
 [ext_resource type="PackedScene" uid="uid://ccp5k1ffifgkj" path="res://Game/Objects/LandingSurface/PillowPink.tscn" id="4_2oq23"]
 [ext_resource type="PackedScene" uid="uid://bvnejtprkm370" path="res://Game/Objects/LandingSurface/PressurePlate.tscn" id="5_21e4a"]
+[ext_resource type="PackedScene" uid="uid://dyfqohlon7cdw" path="res://Game/Objects/GrabbableObject/Relic.tscn" id="5_k13w6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em03y"]
 texture = ExtResource("3_cxbo5")
@@ -22,12 +22,8 @@ sources/0 = SubResource("TileSetAtlasSource_em03y")
 
 [node name="Room" type="Node2D"]
 
-[node name="Pot" parent="." instance=ExtResource("1_dp6ok")]
-y_sort_enabled = true
-position = Vector2(177, 345)
-
 [node name="Player" parent="." instance=ExtResource("2_kn12l")]
-position = Vector2(320, 505)
+position = Vector2(863, 507)
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
@@ -41,6 +37,9 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 0, 131072, 0, 
 
 [node name="Coushin1" parent="." instance=ExtResource("4_2oq23")]
 position = Vector2(863, 473)
+
+[node name="Coushin8" parent="." instance=ExtResource("4_2oq23")]
+position = Vector2(526, 287)
 
 [node name="Coushin2" parent="." instance=ExtResource("4_2oq23")]
 position = Vector2(837, 286)
@@ -62,3 +61,6 @@ position = Vector2(94, 289)
 
 [node name="LandingSurface" parent="." instance=ExtResource("5_21e4a")]
 position = Vector2(91, 61)
+
+[node name="Relic" parent="." instance=ExtResource("5_k13w6")]
+position = Vector2(866, 475)
