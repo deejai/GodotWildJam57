@@ -61,7 +61,9 @@ func _process(delta):
 			held_object.position = Vector2.ZERO
 			update_held_object_visuals()
 	elif Input.is_action_just_pressed("ChangeCourseOfOrangeRelic"):
-		pass
+		if is_instance_valid(Main.boomerang_relic) and Main.boomerang_relic.state == GrabbableObject.State.THROWN:
+			Main.boomerang_relic.velocity = Vector2.RIGHT.rotated(Main.boomerang_relic.position.angle_to_point(get_global_mouse_position())) * Main.boomerang_relic.velocity.length()
+			Main.boomerang_relic.hover_time = 1.0
 
 	var move_vec = Vector2(Input.get_axis("Move Left", "Move Right"), Input.get_axis("Move Up", "Move Down")).normalized()
 
@@ -134,12 +136,13 @@ func throw():
 			var shards: Array[GrabbableObject] = [load("res://Game/Objects/GrabbableObject/RelicThatSplitsShard.tscn").instantiate(), load("res://Game/Objects/GrabbableObject/RelicThatSplitsShard.tscn").instantiate()]
 			for i in range(len(shards)):
 				var shard = shards[i]
-				shard.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 1.0 + throw_charge)
-				shard.reparent(get_parent())
+				shard.position = position
+				shard.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation + (PI/12 if i==0 else -PI/12)) * throw_charge * 200.0, 1.0 + throw_charge)
+				get_parent().add_child(shard)
 				shard.z_index = 20
 
+			held_object.queue_free()
 			held_object = null
-			queue_free()
 	reset_throw_charge()
 
 func _on_lag_fix_1_timeout():

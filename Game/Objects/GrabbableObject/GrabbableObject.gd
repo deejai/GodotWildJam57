@@ -32,6 +32,8 @@ var sliding_bounds_origin: Vector2
 var sliding_bounds_rect: Rect2
 var sliding_linger: float = 0.0
 
+var hover_time: float = 0.0
+
 func land(impact: Impact):
 	var landing_surface: LandingSurface = Main.object_registry.get_landing_surface_at_point(position)
 
@@ -135,7 +137,10 @@ func _process(delta):
 		State.THROWN:
 			print("im bring thrown!")
 			position += velocity * delta
-			flight_time_elapsed += delta
+
+			hover_time = max(0.0, hover_time - delta)
+			if hover_time <= 0.0:
+				flight_time_elapsed += delta
 
 			if flight_time_elapsed >= total_flight_duration:
 				sprite.scale = original_sprite_scale
