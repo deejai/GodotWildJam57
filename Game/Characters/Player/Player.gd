@@ -124,10 +124,22 @@ func start_charging_throw():
 
 func throw():
 	if is_instance_valid(held_object):
-		held_object.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 1.0 + throw_charge)
-		held_object.reparent(get_parent())
-		held_object.z_index = 20
-		held_object = null
+		if held_object.relic_power != GrabbableObject.RelicPower.SPLIT:
+			held_object.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 1.0 + throw_charge)
+			held_object.reparent(get_parent())
+			held_object.z_index = 20
+			held_object = null
+
+		else:
+			var shards: Array[GrabbableObject] = [load("res://Game/Objects/GrabbableObject/RelicThatSplitsShard.tscn").instantiate(), load("res://Game/Objects/GrabbableObject/RelicThatSplitsShard.tscn").instantiate()]
+			for i in range(len(shards)):
+				var shard = shards[i]
+				shard.throw(Vector2.RIGHT.rotated(throw_charge_node.rotation) * throw_charge * 200.0, 1.0 + throw_charge)
+				shard.reparent(get_parent())
+				shard.z_index = 20
+
+			held_object = null
+			queue_free()
 	reset_throw_charge()
 
 func _on_lag_fix_1_timeout():

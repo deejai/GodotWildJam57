@@ -65,6 +65,7 @@ func land(impact: Impact):
 		var bounce_velocity: Vector2 = 75.0 * (velocity.normalized() if velocity != Vector2.ZERO else Vector2.RIGHT)
 		if bounce_velocity.length_squared() < velocity.length_squared():
 			bounce_velocity = velocity
+
 		throw(bounce_velocity, max(1.0, last_flight_duration))
 	elif landing_surface and landing_surface.type == LandingSurface.Type.SLIDER:
 		last_flight_duration = 0.0

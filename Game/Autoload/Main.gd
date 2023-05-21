@@ -9,6 +9,7 @@ var split_relic_shard1: GrabbableObject
 var split_relic_shard2: GrabbableObject
 var boomerang_relic: GrabbableObject
 var game_over: bool = false
+var game_over_timer: float = 5.0
 
 var level_index: int = 0
 var level_arr: Array = [
@@ -21,6 +22,11 @@ func _ready():
 
 func _process(delta):
 	Main.toggle_fullscreen()
+
+	if not game_over and not is_instance_valid(player):
+		game_over_timer -= delta
+		if game_over_timer <= 0.0:
+			load_current_level()
 
 static func toggle_fullscreen():
 	if Input.is_action_just_pressed("Toggle Fullscreen"):
@@ -35,7 +41,7 @@ func set_ground_water(active: bool):
 			obj.active = active
 			obj.visible = active
 
-func reset_for_new_level():
+func reset_level_params():
 	object_registry.reset()
 	relic = null
 	explode_relic = null
@@ -43,3 +49,12 @@ func reset_for_new_level():
 	split_relic_shard1 = null
 	split_relic_shard2 = null
 	boomerang_relic = null
+	game_over_timer = 5.0
+
+func load_current_level():
+	reset_level_params()
+	get_tree().change_scene_to_packed(level_arr[level_index])
+
+func go_to_next_level():
+	level_index += 1
+	load_current_level()

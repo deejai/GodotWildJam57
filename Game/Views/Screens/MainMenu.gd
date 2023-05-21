@@ -15,4 +15,4 @@ func _process(delta):
 
 
 func _on_start_game_button_pressed():
-	get_tree().change_scene_to_packed(room_scene)
+	Main.load_current_level()
