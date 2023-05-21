@@ -67,46 +67,6 @@ position = Vector2(160, 160)
 [node name="Relic" parent="." instance=ExtResource("4_m4160")]
 position = Vector2(858, 334)
 
-[node name="WorterColumn1" parent="." instance=ExtResource("5_fpe4j")]
-position = Vector2(32, 32)
-active = true
-
-[node name="Worter2" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 64)
-active = true
-
-[node name="Worter3" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 128)
-active = true
-
-[node name="Worter4" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 192)
-active = true
-
-[node name="Worter5" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 252)
-active = true
-
-[node name="Worter6" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 316)
-active = true
-
-[node name="Worter7" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 380)
-active = true
-
-[node name="Worter8" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 444)
-active = true
-
-[node name="Worter9" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 508)
-active = true
-
-[node name="Worter10" parent="WorterColumn1" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 572)
-active = true
-
 [node name="WorterColumn3" parent="." instance=ExtResource("5_fpe4j")]
 position = Vector2(160, 32)
 active = true
@@ -380,42 +340,6 @@ active = true
 
 [node name="Worter10" parent="WorterColumn9" instance=ExtResource("5_fpe4j")]
 position = Vector2(0, 572)
-active = true
-
-[node name="WorterColumn2" parent="." instance=ExtResource("5_fpe4j")]
-position = Vector2(96, 96)
-active = true
-
-[node name="Worter2" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 64)
-active = true
-
-[node name="Worter3" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 128)
-active = true
-
-[node name="Worter4" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 192)
-active = true
-
-[node name="Worter5" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 252)
-active = true
-
-[node name="Worter6" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 316)
-active = true
-
-[node name="Worter7" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 380)
-active = true
-
-[node name="Worter8" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 444)
-active = true
-
-[node name="Worter9" parent="WorterColumn2" instance=ExtResource("5_fpe4j")]
-position = Vector2(0, 508)
 active = true
 
 [node name="Exit Coushin" parent="." instance=ExtResource("4_qugo0")]
