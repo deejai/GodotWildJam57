@@ -38,6 +38,6 @@ script = ExtResource("1_obl0s")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = -1.57079
 sprite_frames = SubResource("SpriteFrames_u2d2e")
-frame_progress = 0.207287
+frame_progress = 0.477933
 speed_scale = 2.0
 offset = Vector2(0, -32)

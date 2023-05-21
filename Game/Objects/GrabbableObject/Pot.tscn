@@ -4,13 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://sqcflauhel21" path="res://Assets/Sprites/Objects/Pot.png" id="2_tqhg0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmu6f"]
-radius = 29.0
-height = 64.0
+radius = 25.0
+height = 52.0
 
 [node name="Pot" node_paths=PackedStringArray("sprite", "static_body") instance=ExtResource("1_meljm")]
 is_throwable = true
-is_breakable = null
-is_relic = null
 sprite = NodePath("Sprite2D")
 static_body = NodePath("StaticBody2D")
 

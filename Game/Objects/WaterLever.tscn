@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://b58oblldxbbkc"]
+
+[ext_resource type="Script" path="res://Game/Objects/WaterLever.gd" id="1_da0hx"]
+[ext_resource type="Texture2D" uid="uid://ds3i67lo38gek" path="res://Assets/Sprites/Objects/lever.png" id="2_s5q4h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m18y"]
+atlas = ExtResource("2_s5q4h")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4obfp"]
+atlas = ExtResource("2_s5q4h")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls5r2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m18y")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4obfp")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2iqm7"]
+size = Vector2(64, 64)
+
+[node name="WaterLever" type="Node2D"]
+z_index = -5
+script = ExtResource("1_da0hx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ls5r2")
+animation = &"off"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_2iqm7")
