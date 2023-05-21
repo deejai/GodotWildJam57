@@ -7,6 +7,7 @@ const collision_mask_bits = 0b1
 
 @export var is_throwable: bool = false
 @export var is_breakable: bool = true
+@export var is_relic: bool = false
 
 @export var sprite: Sprite2D
 var original_sprite_scale: Vector2
@@ -84,6 +85,8 @@ func set_state(state: State):
 
 func _ready():
 	original_sprite_scale = sprite.scale
+	if is_relic:
+		Main.relic = self
 
 func _process(delta):
 	if is_instance_valid(Main.player) and state == State.GROUNDED:
