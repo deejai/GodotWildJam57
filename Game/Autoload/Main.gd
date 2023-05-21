@@ -55,7 +55,7 @@ func reset_level_params():
 	split_relic_shard1 = null
 	split_relic_shard2 = null
 	boomerang_relic = null
-	game_over_timer = 5.0
+	game_over_timer = 2.0
 
 func load_current_level():
 	reset_level_params()

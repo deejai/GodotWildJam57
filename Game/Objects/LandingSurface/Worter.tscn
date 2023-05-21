@@ -34,7 +34,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nby0d"]
-size = Vector2(64, 64)
+size = Vector2(32, 32)
 
 [node name="Worter" instance=ExtResource("1_3f4n5")]
 z_index = -6

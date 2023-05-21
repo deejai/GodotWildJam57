@@ -350,8 +350,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ppoyq"]
-radius = 21.0
-height = 102.0
+radius = 17.0
+height = 40.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jwqku"]
 shader = ExtResource("3_ayxbo")
@@ -368,7 +368,7 @@ sprite_frames = SubResource("SpriteFrames_8burj")
 animation = &"idle_down_holding"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 7)
+position = Vector2(0, 39)
 shape = SubResource("CapsuleShape2D_ppoyq")
 
 [node name="ThrowChargeNode" type="Node2D" parent="."]

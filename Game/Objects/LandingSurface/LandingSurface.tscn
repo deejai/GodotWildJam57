@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://brl78ord5jj3v"]
+[gd_scene load_steps=3 format=3 uid="uid://brl78ord5jj3v"]
 
 [ext_resource type="Script" path="res://Game/Objects/LandingSurface/LandingSurface.gd" id="1_b3pxb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgpxx"]
+size = Vector2(64, 64)
 
 [node name="LandingSurface" type="Node2D"]
 z_index = -5
 z_as_relative = false
 script = ExtResource("1_b3pxb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_rgpxx")
